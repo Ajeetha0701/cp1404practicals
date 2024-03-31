@@ -10,17 +10,16 @@ class BoxLayoutDemo(App):
 
     def handle_greet(self):
         """Handle the greet button press event."""
-        input_name = self.root.ids.input_name.text.strip()  # Remove leading and trailing whitespaces
-        if input_name:  # Check if input is not empty
+        input_name = self.root.ids.input_name.text.strip()
+        if input_name:
             self.root.ids.output_label.text = f"Hello {input_name}"
         else:
             self.root.ids.output_label.text = "Please enter a name"
 
     def handle_clear(self):
         """Handle the clear button press event."""
-        self.root.ids.output_label.text = ""  # Clear the output label
-        self.root.ids.input_name.text = ""    # Clear the input text
-
+        self.root.ids.output_label.text = ""
+        self.root.ids.input_name.text = ""
 
 if __name__ == "__main__":
     BoxLayoutDemo().run()

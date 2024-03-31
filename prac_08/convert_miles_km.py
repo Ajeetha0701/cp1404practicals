@@ -18,12 +18,12 @@ class ConvertMilesKmApp(App):
     def handle_calculate(self, value):
         """ handle calculation (could be button press or other call), output result to label widget """
         result = float(value) * CONVERSION_FACTOR if value.replace('.', '', 1).isdigit() else 0.0
-        self.root.ids.output_label.text = f"{result:.3f}"  # Limit result to 3 decimal places
+        self.root.ids.output_label.text = f"{result:.3f}"
 
     def handle_increment(self, increment):
         """ handle increment, output result to input widget"""
         input_number = self.root.ids.input_number.text
-        if input_number.replace('.', '', 1).isdigit():  # Allowing decimal input
+        if input_number.replace('.', '', 1).isdigit():
             new_value = str(float(input_number) + increment)
             self.root.ids.input_number.text = new_value if '.' in input_number else new_value.rstrip('.0')
         else:
