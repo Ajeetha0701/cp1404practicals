@@ -1,7 +1,6 @@
 """
 List program
 """
-
 FILENAME = "subject_data.txt"
 
 

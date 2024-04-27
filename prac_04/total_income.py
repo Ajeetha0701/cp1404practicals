@@ -10,7 +10,7 @@ def get_monthly_incomes(num_months):
 def print_income_report(incomes):
     print("\nIncome Report\n-------------")
     total = 0
-    for month in range(1, num_months + 1):
+    for month in range(1,  num_months + 1):
         total += incomes[month - 1]
         total += incomes
         print(f"Month {month:2} - Income: ${incomes:10.2f} Total: ${total:10.2f}")
